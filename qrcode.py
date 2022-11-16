@@ -1,4 +1,3 @@
-#QR code
 import qrcode
 
 def generate_qrcode(text):
@@ -12,11 +11,17 @@ def generate_qrcode(text):
     )
 
     qr.add_data(text)
+
     qr.make(fit=True)
+
     img = qr.make_image(fill_color="black", back_color = "white")
-    img.save("qrimg001.png")
+
+    img.save("qrimg003.png")
 
 url = input("Enter your url: ")
-generate_qrcode(url)
-#generate_qrcode("https://www.codewithtomi.com")
 
+generate_qrcode(url)
+
+
+
+#generate_qrcode("https://www.codewithtomi.com")
